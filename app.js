@@ -14,7 +14,7 @@ app.post("/", function (req, res) {
   const ime = req.body.firstName;
   const prezime = req.body.lastName;
   const mail = req.body.email;
-  const listID = "b066729875";
+  const listID = LIST_ID;
   const usBroj = 21;
   var data = {
     members: [
@@ -34,7 +34,7 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "miroslav:fa52f0512cf2712db804f4a10c227bc6-us21",
+    auth: ("miroslav:" + SECRET_KEY),
   };
 
   const request = https.request(url, options, function (response) {
@@ -74,6 +74,4 @@ app.listen(process.env.PORT || 3000, function () {
   console.log(`Server started on port 3000`);
 });
 
-/* fa52f0512cf2712db804f4a10c227bc6-us21 */
 
-/*  */
