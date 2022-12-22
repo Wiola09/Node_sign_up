@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
   
   const options = {
     method: "POST",
-    auth: "miroslav:fa52f0512cf2712db804f4a10c227bc6-us21",  };
+    auth: "miroslav:fa52f0512cf2712db804f4a10c227bc6-us21",
  
   };
 
