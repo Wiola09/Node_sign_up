@@ -14,7 +14,7 @@ app.post("/", function (req, res) {
   const ime = req.body.firstName;
   const prezime = req.body.lastName;
   const mail = req.body.email;
-  const listID = "b066729875";
+  const listID = process.env.LIST_ID;
   const usBroj = 21;
   var data = {
     members: [
@@ -32,10 +32,10 @@ app.post("/", function (req, res) {
   var jsonData = JSON.stringify(data);
   const url = "https://us21.api.mailchimp.com/3.0/lists/b066729875";
 
-  
+  const tajna = "miroslav:" + process.env.SECRET_KEY;
   const options = {
     method: "POST",
-    auth: "miroslav:fa52f0512cf2712db804f4a10c227bc6-us21",
+    auth: tajna,
  
   };
 
