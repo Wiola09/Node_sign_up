@@ -30,7 +30,7 @@ app.post("/", function (req, res) {
   };
 
   var jsonData = JSON.stringify(data);
-  const url = "https://us21.api.mailchimp.com/3.0/lists/" + LIST_ID;
+  const url = "https://us21.api.mailchimp.com/3.0/lists/" + process.env.LIST_ID;
 
   const tajna = "miroslav:" + process.env.SECRET_KEY;
   const options = {
